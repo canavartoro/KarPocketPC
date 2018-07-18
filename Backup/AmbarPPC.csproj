@@ -1,0 +1,646 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{732ACB23-C6F1-4702-864B-C0C3AE9924F0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationIcon>a_HOUSE.ICO</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>AmbarPPC</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OutputFileFolder>\FlashDisk\AmbarPPC</OutputFileFolder>
+    <RootNamespace>AmbarPPC</RootNamespace>
+    <StartupObject>AmbarPPC.Utility</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <FormFactorID>
+    </FormFactorID>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <DeployDirPrefix>\</DeployDirPrefix>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <DeployDirSuffix>\ambarppc</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.SqlClient">
+      <Name>System.Data.SqlClient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataGrid">
+      <Name>System.Windows.Forms.DataGrid</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmbarSayim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\AnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pasif\BosPaletTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\BosPaletTrans.Designer.cs">
+      <DependentUpon>BosPaletTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\TWinApi.cs" />
+    <Compile Include="URETIM\IsEmriAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URETIM\IsEmriAtama.Designer.cs">
+      <DependentUpon>IsEmriAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelAtama.Designer.cs">
+      <DependentUpon>PersonelAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeriIzleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeriIzleForm.Designer.cs">
+      <DependentUpon>SeriIzleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URETIM\FormFire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URETIM\FormFire.Designer.cs">
+      <DependentUpon>FormFire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEVK\sek_iptal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEVK\sek_iptal.designer.cs">
+      <DependentUpon>sek_iptal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URETIM\FormDurus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URETIM\FormDurus.Designer.cs">
+      <DependentUpon>FormDurus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Animate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\Classes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\FrameLayouts.cs" />
+    <Compile Include="Gui\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ImageButtonTransparent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\TextBoxNumeric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\TextWriterTraceListener.cs" />
+    <Compile Include="Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekle.Designer.cs">
+      <DependentUpon>Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowMany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowMany.Designer.cs">
+      <DependentUpon>HowMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraEkralar\MontajIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\MontajIslemleri.Designer.cs">
+      <DependentUpon>MontajIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAKETLEME\MontajYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAKETLEME\MontajYap.Designer.cs">
+      <DependentUpon>MontajYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URETIM\KavisIcin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URETIM\KavisIcin.Designer.cs">
+      <DependentUpon>KavisIcin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAKETLEME\KavisLe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAKETLEME\KavisLe.Designer.cs">
+      <DependentUpon>KavisLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="m.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="m.Designer.cs">
+      <DependentUpon>m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiktarSor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiktarSor.Designer.cs">
+      <DependentUpon>MiktarSor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAKETLEME\pakeleme_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAKETLEME\pakeleme_2.Designer.cs">
+      <DependentUpon>pakeleme_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SayimDüzelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SayimDüzelt.Designer.cs">
+      <DependentUpon>SayimDüzelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraEkralar\Sevkiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\Sevkiyat.Designer.cs">
+      <DependentUpon>Sevkiyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokD.Designer.cs">
+      <DependentUpon>StokD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicUrunPaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicUrunPaket.Designer.cs">
+      <DependentUpon>TicUrunPaket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\KasaAktarma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\KasaAktarma.Designer.cs">
+      <DependentUpon>KasaAktarma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\KasadanDepoyacik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\KasadanDepoyacik.Designer.cs">
+      <DependentUpon>KasadanDepoyacik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepodanKasaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepodanKasaya.Designer.cs">
+      <DependentUpon>DepodanKasaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\KasadanDepoya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\KasadanDepoya.Designer.cs">
+      <DependentUpon>KasadanDepoya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\PaletTrans1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\PaletTrans1.Designer.cs">
+      <DependentUpon>PaletTrans1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasif\PaletTrans2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\PaletTrans2.Designer.cs">
+      <DependentUpon>PaletTrans2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraEkralar\URETIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\URETIM.Designer.cs">
+      <DependentUpon>URETIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URETIM\UretimGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Database.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DepoSecimOzel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\DetayliSevk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Engine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\Hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OzelSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\PaletIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\PaletTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\SeriliTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEVK\SevkEmri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEVK\SevkEmriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\Siparisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraEkralar\Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokDonusum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasif\StokTransferEkBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SunucuAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UretimCikis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URETIM\PaletTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UretimRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UretimRapor.Designer.cs">
+      <DependentUpon>UretimRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Utility.cs" />
+    <Compile Include="Gui\Yardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Help.cs">
+    </Compile>
+    <Compile Include="YeniPalet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Zaman.cs" />
+    <EmbeddedResource Include="AmbarSayim.resx">
+      <DependentUpon>AmbarSayim.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\AnaEkran.resx">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\AnaEkran.tr.resx">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\BosPaletTrans.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BosPaletTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekle.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\IsEmriAtama.resx">
+      <DependentUpon>IsEmriAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelAtama.resx">
+      <DependentUpon>PersonelAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeriIzleForm.resx">
+      <DependentUpon>SeriIzleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\FormFire.resx">
+      <DependentUpon>FormFire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEVK\sek_iptal.resx">
+      <DependentUpon>sek_iptal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\FormDurus.resx">
+      <DependentUpon>FormDurus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\FormHelp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowMany.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HowMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\MontajIslemleri.resx">
+      <DependentUpon>MontajIslemleri.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAKETLEME\MontajYap.resx">
+      <DependentUpon>MontajYap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\KavisIcin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KavisIcin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAKETLEME\KavisLe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KavisLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="m.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiktarSor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MiktarSor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAKETLEME\pakeleme_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pakeleme_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SayimDüzelt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SayimDüzelt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\Sevkiyat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Sevkiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StokD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicUrunPaket.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TicUrunPaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\KasaAktarma.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KasaAktarma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\KasadanDepoyacik.resx">
+      <DependentUpon>KasadanDepoyacik.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepodanKasaya.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DepodanKasaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\KasadanDepoya.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KasadanDepoya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\PaletTrans1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PaletTrans1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\PaletTrans2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PaletTrans2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\URETIM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>URETIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\UretimGirisi.resx">
+      <DependentUpon>UretimGirisi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoSecimOzel.resx">
+      <DependentUpon>DepoSecimOzel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoStok.resx">
+      <DependentUpon>DepoStok.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\DetayliSevk.resx">
+      <DependentUpon>DetayliSevk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\Hakkimizda.resx">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OzelSecim.resx">
+      <DependentUpon>OzelSecim.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\PaletIslemleri.resx">
+      <DependentUpon>PaletIslemleri.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\PaletTransfer.resx">
+      <DependentUpon>PaletTransfer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sec.resx">
+      <DependentUpon>Sec.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecTree.resx">
+      <DependentUpon>SecTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\SeriliTransfer.resx">
+      <DependentUpon>SeriliTransfer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEVK\SevkEmri.resx">
+      <DependentUpon>SevkEmri.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEVK\SevkEmriDetay.resx">
+      <DependentUpon>SevkEmriDetay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\Siparisler.resx">
+      <DependentUpon>Siparisler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraEkralar\Stok.resx">
+      <DependentUpon>Stok.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokDonusum.resx">
+      <DependentUpon>StokDonusum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokSec.resx">
+      <DependentUpon>StokSec.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasif\StokTransferEkBilgi.resx">
+      <DependentUpon>StokTransferEkBilgi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SunucuAyarlari.resx">
+      <DependentUpon>SunucuAyarlari.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tus.resx">
+      <DependentUpon>Tus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UretimCikis.resx">
+      <DependentUpon>UretimCikis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URETIM\PaletTransfer.resx">
+      <DependentUpon>PaletTransfer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UretimRapor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UretimRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Yardim.resx">
+      <DependentUpon>Yardim.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniPalet.resx">
+      <DependentUpon>YeniPalet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="a_HOUSE.ICO" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>
