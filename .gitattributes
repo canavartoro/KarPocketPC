@@ -8,3 +8,5 @@
 *.phar binary
 *.class binary
 *.dll binary
+*.zip binary
+*.rar binary
